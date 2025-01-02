@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modify</title>
+</head>
+<body>
+    <form method="post" action="/modify/{{board.id}}">
+        <input type="text" name="writer" value="{{board.writer}}">
+        <input type="text" name="title" value="{{board.title}}">
+        <input type="text" name="content" value="{{board.content}}">
+        <button type="submit">수정완료</button>
+    </form>
+</body>
+</html>

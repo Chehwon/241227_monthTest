@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        ul, li {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>유저 아이디</li>
+        <li>제목</li>
+        <li>조회수</li>
+    </ul>
+    {% for item in boardList %}
+    <ul>
+        <li>
+            <a href="/view?id={{item.id}}">{{item.user_id}}</a>
+        </li>
+        <li>{{item.title}}</li>
+        <li>{{item.content}}</li>
+    </ul>
+    {% endfor %}
+</body>
+</html>

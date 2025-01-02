@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>view</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        ul, li {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        li {
+            list-style: none;
+        }
+        form {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>유저 아이디</li>
+        <li>제목</li>
+        <li>조회수</li>
+    </ul>
+    <ul>
+        <li>
+            <a href="./view?id={{item.id}}"></a>{{board.user_id}}</li>
+        <li>{{board.title}}</li>
+        <li>{{board.content}}</li>
+    </ul>
+    <form method="post" action="/delete/{{board.id}}">
+        <button type="submit">삭제버튼</button>
+        <button type="button">
+            <a href="/modify/{{board.id}}">글 수정하기</a>
+        </button>
+    </form>
+    
+</body>
+</html>
